@@ -1,0 +1,6 @@
+#!/bin/bash
+
+mkdir -p bin
+for i in *.c; do
+  ${CC-cc} -Os -s "$i" -o "bin/${i%.c}" -Wall -Wextra
+done
